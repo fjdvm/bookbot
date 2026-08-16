@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from stats import get_num_words, get_char_count
 import time
+import sys
 
 
 def get_book_texts(book_name) -> str:
@@ -23,7 +24,10 @@ def report(book_name: str, word_count: int, char_dicts: dict) -> str:
 
 
 if __name__ == "__main__":
-    book_name = "books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    book_name = sys.argv[1]
     book_texts = get_book_texts(book_name)
     word_count = get_num_words(book_texts)
     chars_count = get_char_count(book_texts)
