@@ -2,7 +2,7 @@
 from stats import get_num_words, get_char_count
 
 
-def get_book_texts(book_name):
+def get_book_texts(book_name) -> str:
     with open(book_name) as f:
         book_texts = f.read()
         return book_texts
@@ -15,4 +15,4 @@ if __name__ == "__main__":
     chars_count = get_char_count(book_texts)
 
     print(f"Found {word_count} total words in {book_name}")
-    print(f"Found {chars_count} total characters in {book_name}")
+    print(chars_count)
