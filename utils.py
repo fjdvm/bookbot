@@ -11,5 +11,5 @@ def char_dicts(texts: str) -> dict[str, int]:
 
 
 def char_dict_to_sort_list(dictionary: dict) -> list[tuple[str, int]]:
-    result = sorted(list(dictionary.items()), key=lambda item: item[0], reverse=True)
+    result = sorted(list(dictionary.items()), key=lambda item: item[1], reverse=True)
     return result

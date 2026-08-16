@@ -7,6 +7,6 @@ def get_num_words(texts: str) -> int:
 
 
 def get_char_count(texts: str) -> int:
-    char_counts = char_dicts(texts)
-    char_count = char_dict_to_sort_list(char_counts)
+    characters = char_dicts(texts)
+    char_count = char_dict_to_sort_list(characters)
     return char_count
