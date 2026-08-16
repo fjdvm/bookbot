@@ -6,7 +6,7 @@ def get_num_words(texts: str) -> int:
     return word_count
 
 
-def get_char_count(texts: str) -> int:
+def get_char_count(texts: str) -> list[tuple[str, int]]:
     characters = char_dicts(texts)
     char_count = char_dict_to_sort_list(characters)
     return char_count

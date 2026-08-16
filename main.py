@@ -10,7 +10,7 @@ def get_book_texts(book_name) -> str:
         return book_texts
 
 
-def report(book_name: str, word_count: int, char_dicts: dict) -> str:
+def report(book_name: str, word_count: int, char_dicts: list[tuple[str, int]]) -> None:
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_name}...")
     time.sleep(3)
